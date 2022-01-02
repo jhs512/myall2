@@ -1,0 +1,39 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>멋스타그램</title>
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- 제이쿼리 -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- 부트스트랩 -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+
+    <!-- 커스텀 -->
+    <script src="{% static 'common.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+
+</head>
+<body>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>

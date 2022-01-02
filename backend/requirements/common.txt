@@ -1,0 +1,9 @@
+django
+django-model-utils
+django-extensions
+django-dotenv
+pillow
+mysqlclient
+git+https://github.com/jhs512/django-pydenticon
+sorl-thumbnail
+django-bootstrap5
